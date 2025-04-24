@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Saya</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #555;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+form {
+  margin-top: 30px;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Website Saya</h1>
+  </header>  <nav>
+    <a href="#">Beranda</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>  <main>
+    <section>
+      <p>Ini adalah halaman utama website saya. Semoga hari Anda menyenangkan!</p>
+      <button onclick="sayHello()">Klik Saya</button>
+    </section><section id="galeri" class="gallery">
+  <img src="https://via.placeholder.com/150" alt="Gambar 1">
+  <img src="https://via.placeholder.com/150" alt="Gambar 2">
+  <img src="https://via.placeholder.com/150" alt="Gambar 3">
+</section>
+
+<section id="kontak">
+  <h2>Hubungi Saya</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Nama" required><br>
+    <input type="email" placeholder="Email" required><br>
+    <textarea placeholder="Pesan" rows="4" required></textarea><br>
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+
+  </main>  <script>
+    function sayHello() {
+      alert("Halo! Terima kasih sudah mengunjungi website saya.");
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Terima kasih! Pesan Anda sudah terkirim.");
+    }
+  </script></body>
+</html>
